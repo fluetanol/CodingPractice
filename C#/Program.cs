@@ -1,2 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System;
+class ProgramTest{
+    private static void Main(){
+        Console.WriteLine("Hello, World!");
+        for(int i =0; i<5; i++){
+            Console.WriteLine(i);
+        }
+    }
+}
