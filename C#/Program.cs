@@ -1,9 +1,13 @@
 ﻿using System;
 class ProgramTest{
     private static void Main(){
-        Console.WriteLine("Hello, World!");
-        for(int i =0; i<5; i++){
-            Console.WriteLine(i);
+        int[] answer = new int[] { 5 };
+        for (int i = 0; i < 5; i++)
+        {
+            answer.Append(i);
+         
         }
+        Console.WriteLine(answer);
+    
     }
 }
