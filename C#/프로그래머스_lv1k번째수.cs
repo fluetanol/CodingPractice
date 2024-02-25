@@ -1,7 +1,7 @@
 //https://school.programmers.co.kr/learn/courses/30/lessons/12982
 //프로그래머스_lv1k번째수
 //2024.02.23
-//1441
+//30분
 using System;
 
 public class 프로그래머스_lv1k번째수
