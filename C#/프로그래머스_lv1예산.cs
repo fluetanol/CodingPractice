@@ -5,6 +5,7 @@
 
 using System;
 using System.Linq;
+using System.Collections.Generic;
 
 public class 프로그래머스_lv1예산
 {
@@ -19,7 +20,11 @@ public class 프로그래머스_lv1예산
             if (sum > budget) break;
             answer += 1;
         }
+        Dictionary<int, int> a =  new();
+        a.Keys.ToArray();
         return answer;
+
+
     }
 }
 
