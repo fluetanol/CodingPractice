@@ -1,0 +1,26 @@
+https://school.programmers.co.kr/learn/courses/30/lessons/68644?language=csharp
+//프로그래머스_lv1두개뽑아서더하기
+//2024.03.02
+//10분
+using System;
+using System.Collections.Generic;
+using System.Linq;
+public class Solution {
+    public int[] solution(int[] numbers) {
+        int[] answer = new int[] {};
+        List<int> num = new List<int>();
+        
+        for(int i=0; i<numbers.Length; i++){
+            for(int j=i+1; j<numbers.Length; j++){
+                num.Add(numbers[i] +numbers[j]);
+            }
+        }
+        num.Sort();
+        answer = num.Distinct().ToArray();
+        return answer;
+    }
+}
+
+//리스트 기본 함수로 .sort
+//linq 확장팩으로 distinct쓰면 
+//중복제거와 정렬을 편하게 할 수 있다.
