@@ -1,6 +1,6 @@
 //https://school.programmers.co.kr/learn/courses/30/lessons/131701?language=csharp
 //프로그래머스_lv2연속부분수열합의개수
-//2024.03.20
+//2024.02.20
 //20분
 using System;
 using System.Collections.Generic;
