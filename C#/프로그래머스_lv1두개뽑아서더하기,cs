@@ -1,7 +1,8 @@
-https://school.programmers.co.kr/learn/courses/30/lessons/68644?language=csharp
+//https://school.programmers.co.kr/learn/courses/30/lessons/68644?language=csharp
 //프로그래머스_lv1두개뽑아서더하기
 //2024.03.02
 //10분
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
