@@ -5,7 +5,8 @@
 
 using System;
 
-public class Solution {
+public class 프로그래머스_lv2모음사전
+{
     bool Search(string word, string s, char[] cs, int depth, ref int count){
         if(depth == 5) return false;
         
