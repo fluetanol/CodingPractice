@@ -1,5 +1,5 @@
 //https://school.programmers.co.kr/learn/courses/30/lessons/43162#
-//프로그래머스_lv2네트워크
+//프로그래머스_lv3네트워크
 //2024.04.05
 //1시간
 
