@@ -1,7 +1,7 @@
 // https://swexpertacademy.com/main/solvingProblem/solvingProblem.do
 // 삼성아카데미d1연월일달력
 // 24/04/19
-// 2108
+// 15분
 
 #include <iostream>
 #include <string>
