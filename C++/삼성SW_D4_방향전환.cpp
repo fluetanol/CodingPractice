@@ -1,5 +1,5 @@
 // https :  swexpertacademy.com/main/solvingProblem/solvingProblem.do
-// 삼성아카데미d3방향전환
+// 삼성아카데미d4방향전환
 // 24/05/03
 
 #include <iostream>
