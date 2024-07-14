@@ -5,7 +5,6 @@
 #include <cmath>
 #include <unordered_set>
 #include <unordered_map>
-#pragma warning(disable : 4996)
 
 using namespace std;
 
@@ -23,25 +22,29 @@ int main()
         float d = sqrt(pow((v[3] - v[0]), 2.0f) + pow((v[4] - v[1]), 2));
         int bigger = v[5] > v[2] ? v[5] : v[2];
 
-        if (d == 0 && v[5] == v[2])
-            cout << -1 << endl;
+        //일치
+        if (d == 0 && v[5] == v[2])    cout << -1 << endl;
+
+        //불일치할때 원 중점이 서로 바깥에 있는 경우
         else if (bigger <= d)
         {
-            if (d < v[5] + v[2])
-                cout << 2 << endl;
-            else if (d == v[5] + v[2])
-                cout << 1 << endl;
-            else if (d > v[5] + v[2])
-                cout << 0 << endl;
+            //포개어져 있음 == 두 중점 사이의 거리가 반지름 합보다 큼
+            if (d < v[5] + v[2])  cout << 2 << endl;
+            //접함  == 두 중점 사이의 거리와 반지름 합이 일치
+            else if (d == v[5] + v[2])  cout << 1 << endl;
+            //안 만남 == 반지름 거리보다 두 중점 사이의 거리가 더 멀음
+            else if (d > v[5] + v[2]) cout << 0 << endl;
         }
+
+        //불일치할때 원 중점이 서로 안쪽에 있는 경우
         else
         {
-            if (d > abs(v[5] - v[2]))
-                cout << 2 << endl;
-            else if (d == abs(v[5] - v[2]))
-                cout << 1 << endl;
-            else if (d < abs(v[5] - v[2]))
-                cout << 0 << endl;
+            //여기부터는 설명이 어려운데
+            //반지름 간의 차이와 중점 사이의 거리간의 관계를
+            //직접 그림 그려가면서 부등식을 이해하는 게 좋다.
+            if (d > abs(v[5] - v[2])) cout << 2 << endl;
+            else if (d == abs(v[5] - v[2]))  cout << 1 << endl;
+            else if (d < abs(v[5] - v[2]))   cout << 0 << endl;
         }
     }
 }
