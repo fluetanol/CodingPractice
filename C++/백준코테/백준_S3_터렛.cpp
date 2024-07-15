@@ -1,10 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <cstdio>
-#include <algorithm>
 #include <cmath>
-#include <unordered_set>
-#include <unordered_map>
 
 using namespace std;
 
