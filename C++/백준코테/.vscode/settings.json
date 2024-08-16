@@ -48,6 +48,9 @@
         "xstring": "cpp",
         "xtr1common": "cpp",
         "xutility": "cpp",
-        "백준_S4_기타줄.C": "cpp"
+        "백준_S4_기타줄.C": "cpp",
+        "deque": "cpp",
+        "queue": "cpp",
+        "string": "cpp"
     }
 }
