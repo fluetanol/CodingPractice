@@ -159,3 +159,45 @@ int main()
     분할 정복의 개념을 이해하기 정말 좋은 문제인듯.
 
 */
+
+
+//아래 코드는 위 코드를 바탕으로 조건문만 개선시킨 코드
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+
+    long n, r, c;
+    cin >> n >> r >> c;
+
+    long long line = pow(2, n);
+    long long num = 0, startc = 0, startr = 0;
+    long long sum = line * line;
+
+    while (line > 1)
+    {
+        line = line / 2;
+        long long divider = startr + line;
+        long long dividec = startc + line;
+
+        sum /= 4;
+
+        if (dividec <= c)
+        {
+            startc = dividec;
+            num += sum * 1;
+        }
+        if (divider <= r)
+        {
+            startr = divider;
+            num += sum * 2;
+        }
+    }
+    cout << num << endl;
+}
