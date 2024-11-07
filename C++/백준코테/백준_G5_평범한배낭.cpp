@@ -110,3 +110,64 @@ int main(int argc, char const *argv[])
 
 
 */
+
+
+//아래는 며칠 뒤 스스로 복습용으로 풀어본 코드
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <algorithm>
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+
+    int n, k;
+    cin >> n >> k;
+
+    vector<pair<int, int>> p(n);
+    for (int i = 0; i < n; i++)
+    {
+        int w, v;
+        cin >> w >> v;
+        p[i] = make_pair(w, v);
+    }
+
+    vector<vector<int>> dp(k + 1);
+    for (int i = 0; i <= k; i++)
+    {
+        dp[i].resize(n + 1);
+    }
+
+    for (int i = 1; i <= k; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            int w = p[j - 1].first;
+            int v = p[j - 1].second;
+            
+            if (w > i)
+            {
+                dp[i][j] = dp[i][j - 1];
+            }
+            else if (w == i)
+            {
+                dp[i][j] = max(v, dp[i][j - 1]);
+            }
+            else
+            {
+                dp[i][j] = max(dp[i][j - 1], v + dp[i - w][j - 1]);
+            }
+        }
+    }
+
+    cout << dp[k][n] << endl;
+}
+/*
+    벡터가 공간 할당에 좀 구리긴 한데 아무튼 통과함
+
+*/
