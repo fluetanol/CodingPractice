@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 
+// https://www.acmicpc.net/source/102326160
+
 using namespace std;
 
 int main()
