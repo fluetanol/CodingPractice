@@ -29,22 +29,29 @@ int main()
         {
             break;
         }
-
+        // 순간이동
         if (x * 2 <= MAX && dist[x * 2] > dist[x])
         {
             dist[x * 2] = dist[x];
             dq.push_front(x * 2);
         }
+        // 뒤로
         if (x - 1 >= 0 && dist[x - 1] > dist[x] + 1)
         {
             dist[x - 1] = dist[x] + 1;
             dq.push_back(x - 1);
         }
+        // 앞으로
         if (x + 1 <= MAX && dist[x + 1] > dist[x] + 1)
         {
             dist[x + 1] = dist[x] + 1;
             dq.push_back(x + 1);
         }
+
+        //이렇게 해도 어차피 상관 없는게
+        //2배로 늘어나는 게 항상 더 빠르기 때문에 앞에 넣어두고
+        //1칸씩 가는 건 항상 더 느리기 때문에 뒤에 넣어두어 pq처럼 동작하게 되는 것이다.
+        //pq는 logn의 시간복잡도가 있는데, 이건 그렇지 않으니 속도가 더 빠른것
     }
 
     cout << dist[k];
